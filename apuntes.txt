@@ -1,0 +1,407 @@
+
+Control de flujo: 
+
+Condicionales en JS: En las condicionales nosotros vamos a dar por definicion circunstancias que se cumplan en distintas condiciones especificas
+
+Variables Boolean: El tipo de dato booleano es afirmar si lo que estamos trabajando es verdadero o falso
+
+Se aceptan valores True o False, se los podemos dar directamente a nuestras variables, asi como guardabamos strings o numeros
+
+Estructura = La estructura mas utilizada en los condicionales es la palabra reservada if, que da la condicion que cuando algo sea afirmativo, que se cumpla
+
+En javascript, el if se acompaña con (), en donde dentro de este parentesis vamos a especificar nuestra variable junto a la condicion que queremos que cumpla, y las instrucciones que especificamos que deben ejecutarse deben ser en llaves
+
+if (condicion) {
+    instrucciones
+}
+
+Ej) if (edad > 18) {
+    alert("Sos mayor de edad")
+}
+
+Hay muchas condiciones que podemos añadir a nuestra variable, como < o >, <= o >=, == o != 
+
+Else: La palabra reservada else, sirve para acompañar al if, esto sirve para plantear dos posibles opciones a la condicion que trabajemos, por ejemplo, trabajar algo afirmativo en el if, y si no es afirmativo trabajarlo en el else
+
+Ej) 
+
+if (edad >= 18) {
+    alert("Sos mayor de edad")
+}
+else {
+    alert("No sos mayor de edad")
+}
+
+else if: El else if (funciona como el elif en python) sirve para trabajar condiciones que no todo el tiempo son blanco o negro, ya que este funciona para proporcionar una tercera opcion 
+
+Es util usar el else if antes de usar un else definitivo. asi con el else if dar bastantes opciones, y dar una opcion definiva del programa con el else 
+
+Esto se da especificamente en javascrit por una cuestion de orden, pero en python usabamos el elif como ultima carta
+
+Ej) if (edad >= 18) {
+    alert("Sos mayor de edad");
+}
+else if (edad == 4) {
+    alert("Sos un bebe");
+}
+else {
+    alert("No sos mayor de edad");
+}
+
+Si nosotros usamos el else if como ultima afirmacion, lo que nos da esto es un error en el orden de las cosas,
+
+Operadores en JS: == Es igual , === Es estrictamente igual, != Es distinto, !== Es estrictamente distinto, && (AND), sirve para dar dos condiciones 
+
+Para usar && en un if, necesitamos que ambas condiciones que aplicamos sean verdaderas 
+
+Tambien tenemos el operador or, en js lo usamos ||, en donde esperamos que alguna de las afirmaciones sea verdadera 
+
+En caso de combinar operadores, tenemos que tener cuidado en el orden que usamos, ya que podemos ir combinando tipos de operadores, como en la misma afirmacion usar &&, y ||, al ser asi debemos respetar los parentesis, y respetar las jerarquias y reglas de cada operador
+
+Ciclos e iteraciones: Los ciclos o tambien conocidos como bucles, sirven para generar una acción de una manera repetida, de esta manera realizamos acciones de manera automatica y nos evitamos definir muchas veces el mismo codigo 
+
+Tipos de ciclos: Ciclos por conteo como el for y ciclos condicionales como el while y do while
+
+La diferencia entre estos tipos de ciclos, es que los ciclos por conteo define un numero especifico para una condicion que asignemos, y los ciclos condicionales repiten la accion sin un numero especifico de repeticiones de manera automatica
+
+Estructura for: La estructura for recibe 3 valores distintos en distintos tiempos 
+
+for(desde; hasta; actualización) {
+
+}
+
+El primer valor es el valor inicial en donde empieza la iteracion, el primer valor es nuestra variable let i = desde 0
+
+for(let i = 0)
+
+El orden en el cual se ejecuta el ciclo, es desde el inicio, hasta la actualizacion hasta que el segundo parametro se deja de cumplir
+
+Ej) for(let i = 0; i >= 5; i + 1 ) {
+    console.log(i)
+}
+
+Como vemos, el ciclo se repite desde el la primer instrucción y la tercera instrucción que ejecuta la segunda, y asi hasta que la segunda instrucción no se pueda ejecutar mas
+
+Tambien podemos tener un for que adentro tenga otro for, pero esto debe ser usandolo con otra variable, no con la misma
+
+Un tip para hacer un poco mas corta la sintaxis, es en el parametro de actualizacion, incluir i += "numero de ejemplo" 
+
+Es una abreviatura que podemos usar, otra que tambien podemos usar es i++ o i--, Aunque esto solamente indica que le estoy sumando o restando 1 solo 
+
+Un ejemplo practico, es hacer una turnera con este sistema 
+
+Ej) 
+
+for(let i = 1 ; i < 3 ; i++){
+
+    if(i == 2){
+        alert("Apurate, este es el ultimo turno")
+    }
+    let nombreIngresado = prompt("Ingrese su nombre:")
+    alert("Bienvenido " + nombreIngresado + "." + "\nSu turno es el N:" + i)
+}
+alert("Nos quedamos sin turnos por hoy")
+
+Recordar tambien que podemos utilizar variables definidas en nuestro ciclo for, pero lo mas normal es usarlas en el segundo orden
+
+Break & Continue: Estas dos sentencias, sirven para especificar una acción especifica, el continue sirve saltear la iteraccion, el break sirve para cortar completamente el ciclo 
+
+Aunque, para utilizar estas sentencias debemos tener en cuenta un orden logico, ya que no siempre tiene sentido usar estas sentencias en una cadena
+
+While: Cuando usamos un while, no definimos un numero exacto de repeticiones, por eso es que en algun momento debemos cortar la repeticion, si no la cortamos vamos a generar un bucle infinito 
+
+Para usar el while, como parametro tenemos que dar un parametro verdadero 
+
+while()
+
+Para esto usamos el do while
+
+Do while: El do while garantiza que por lo menos la repeticion se genera una o dos veces, y luego se corte si es falsa
+
+let repetir = false; 
+do {
+    console.log("solo una vez");
+    }while(repetir)
+}
+
+Los do while, tambien los podemos iniciar con un for, en ciertos momentos es mas eficiente hacer alguno u otro
+
+Switch: El switch me va a permitir manejar varias condiciones sobre una misma variable, esto no es un bucle, si no una sentencia como ya habiamos visto
+
+El switch es una estructura un poco mas ordenada, en la cual nos da la facilidad de poner multiples condiciones sobre la misma variable
+
+Algo importante, es a los switch, cuando termina la ejecucion que queremos realizar, incluirles un break final
+
+Case & Default: El case es lo que va a reemplazar a cada una de las condiciones if, y el default es para reemplazar lo que seria un else, ya que el default se usa para cuando no cumple ninguna de esas condiciones 
+
+Todo esto lo debemos usar cuando incluimos un switch
+
+Un caso usando switch, recordar que para que el switch funcione, debemos incluirle un True, para que el codigo pueda funcionar
+let precio = parseInt(prompt("Ingrese el precio:"))
+
+switch(true){
+    case precio < 20:
+        alert("El precio es menor que 20");
+        break;
+    case precio < 50:
+        alert("El precio es menor que 50");
+        break;
+    case precio < 100:
+        alert("El precio es menor que 100");
+        break;
+    case precio > 100:
+        alert("El precio es mayor que 100");
+        break;
+    default:
+        console.log(precio)
+        alert("No ingresaste un precio en numeros");
+        break;
+}
+
+
+Tenemos que evaluar bien cuando nos conviene mas usar un if o un switch, cuando el codigo algo simple sin muchas comparaciones, conviene usar if, pero cuando estamos haciendo algo un poco mas extenso, conviene usar el switch
+
+Switch es para usarse en ciertas ocasiones puntuales, pero normalmente vamos a usar if
+Programacion con funciones: 
+
+Funciones: Una funcion se denomina como un conjunto de instrucciones que sirven para realizar una tarea especifica, lo importante de esto, es que esto nos permite re utilizar estas herramientas
+
+Dentro de las funciones, utilizamos la metodologia dry (Dont repeat yourself ), 
+que nos sirve para repetir la menor cantidad de codigo posible, ademas con ellas podemos solucionar un problema muy complejo, tratandolo en porciones mas simples, en ellas se focalizan tareas principales para el programas, la funcion aporta entendimiento y utilidad al codigo y en el vienen la facilidad y rapidez para hacer modificaciones en el codigo 
+
+Declaracion de funciones: Las funciones se declaran con la palabra reservada function(), a esta palabra tenemos que acompañarla con un nombre, tener en cuenta que tantos funciones como palabras, las debemos nombrar en CamelCase , y finalmente las instrucciones dentro de la funcion deben estar entre las llaves
+
+ej) function saludar() {
+    console.log("Hola estudiantes");
+}
+
+pero aca solamente estamos declarando esta funcion, nunca la estamos ejecutando, para ejecutar esta funcion debemos hacerle un llamado
+
+Para llamar la funcion tenemos que escribir el nombre de la funcion junto a () vacios,
+
+ej) saludar();
+
+y aqui es donde se va a ejecutar esta funcion
+
+nuestro ejemplo de funcion quedaria algo asi: 
+
+
+function saludar(){
+    console.log("Bienvenidos a todos")
+}
+
+saludar();
+
+en donde en la consola se mostraria el mensaje que nosotros escribimos
+
+a esta funcion saludar, la podemos repetir todas las veces que nosotros desearamos
+
+Nosotros por ahora, utilizamos las funciones sin ningun parametro dentro del parentesis, 
+
+Pero la utilidad de añadir parametros, es que a nuestra funcion le añadimos informacion de afuera y a este argumento lo utilizamos dentro de la funcion 
+
+Lo que tenemos que tener en cuenta es manejar la legibilidad dentro de los parametros que pasamos, para que pueda entenderse la funcionalidad de nuestra funcion
+
+
+Ej) function suma (num1, num2){
+    let numero = num1 + num2;
+    console.log(numero)
+}
+
+suma(2, 6)
+suma(8, 24)
+
+y a medida que le pasamos numeros, va a ir realizando nuestra suma 
+
+Return: La palabra reservada return, sirve para devolver algun valor, y esto es lo correcto de trabajar, ya que si no solamente lo que usamos en la funcion queda en la funcion, con el return la podemos usar tambien fuera de la funcion
+
+ej) 
+
+function suma(num1, num2){
+    return num1 + num2
+}
+
+function mensaje(resultado){
+    console.log(resultado)
+}
+
+let numeroA = parseInt(prompt("Ingrese el primer numero"))
+let numeroB = parseInt(prompt("Ingrese el segundo numero"))
+
+let numeroTotal = suma(numeroA, numeroB)
+mensaje(numeroTotal)
+
+Lo mejor es llamar a la funcion luego de declararla
+
+Scopes: El scope es el ambito o lugar en donde vamos a declarar una variable, hablamos del contexto al que pertenece la misma dentro de un algoritmo restringiendo el uso y su alcance, 
+
+Tenemos dos tipos de scopes, scopes globales y locales
+
+Como definir cada una?
+
+Si la variable esta declarada de manera independiente, declarada fuera de cualquier bloque, estamos hablando de una variable global 
+
+En cambio, si tenemos una variable que esta definida dentro de un bloque, estamos hablandod de una variable local, en donde solamente podemos usarla dentro de ese contexto
+
+Siempre tener en cuenta que un scope global no puede usar un scope local, ya que esto daria un error
+
+Lo ideal, es tener la menor cantidad de variables globales posibles, ya que consumen mucho espacio de almacenamiento, en cambio las variables locales no ocupan este espacio en la memoria ya que cuando se ejecute la funcion esa variable se va a destruir hasta nueva ejecucion, evitando usar espacio en la memoria
+
+Funciones anonimas y funciones flecha:
+
+Hasta ahora vimos el metodo normal de declarar una funcion, ahora, hay nuevas formas de declarar una funcion de una manera mas avanzada, y esto se añadio en las nuevas actualizaciones es6 en js
+
+Aunque, esto no sustituye el uso de las funciones clasicas como ya habiamos visto, todo esto sirve para situaciones en especiales en donde lo requiera
+
+Funciones anonimas: Una funcion anonima es una funcion que se define sin nombre, si no que se usa asignandola a una constante con nombre, y se utiliza para ser usada como un parametro o asignada a una variable
+
+Lo util de esta funcion, es usarla cuando necesitamos usar una funcion que no vamos a reutilizar, si no usarla para algo en particular que se ejecuta en ese momento 
+
+ej) const suma = function (a, b) {return a + b}
+ 
+console.log(suma(15,20))
+
+Funciones flecha: Es como la funcion anonima pero un poco mas simplificada,
+
+ej) const = suma (a, b) => {return a + b}
+
+console.log(suma(20, 5)) 
+
+La diferencia entre estas dos funciones, es meramente de sintaxis, y normalmente lo que mas se usa son las funciones clasicas o las funciones flecha
+
+En particular, las funciones flechas se utilizan mucho para trabajar React
+
+Objetos: 
+
+Un objeto en javascript es una esctructura que se usa para agrupar distintos valores dentro de una misma cosa, como una coleccion de datos que estan relacionados entre si, en forma de pares key/valor
+
+Como declaramos un objeto?
+
+Los objetos se asignan a traves de llaves y en un tipo de variable constante, y en estas llaves vamos a tener nuestros pares key/valor 
+
+ej) 
+
+const persona = {
+    nombre: "Homero",
+    edad: 39,
+    calle: "Ameghino
+}
+
+y toda esta informacion se va a encontrar almacenada en una sola variable, que seria la variable constante llamada persona
+
+a cada key que nosotros creamos, se le llama propiedad, y se dice que cada key es una propiedad de en este caso persona
+
+Para acceder desde el exterior a estas propiedades, tenemos dos formas distintas
+
+La primer forma es usar la notacion (.), en donde escribimos el nombre del objeto acompañado de un . y la propiedad
+
+ej) console.log(persona.nombre)
+
+Y la otra forma para obtener un valor dentro de un objeto, es usar la notacion en corchetes ([])
+
+ej)
+
+console.log(persona["nombre"])
+
+aca la propiedad va entre comillas en los parentesis 
+
+lo mas sencillo es usar la notacion de puntos, pero en momentos va a ser mas util usar la propiedad de corchetes, ya que si el objeto no existiera, este tiene la posibilidad de crearlo, y en caso contrario usando la notacion, si no encuentra el objeto nos devuelve un error 
+
+No solamente nosotros podemos acceder a estos valores para su uso, si no que tambien con estas notaciones podemos asignarles nuevos valores a estas variables
+
+ej) 
+
+persona["nombre"] = "Marge"
+persona.edad = 36
+
+Objetos constructores: 
+
+el constructor sirve para crear objetos que van a tener las mismas propiedades
+
+esto se crea usando funciones, importante usar el constructor usarlo en pascalCase, es decir que siempre la funcion constructora debe ir con mayuscula
+
+ej) function Persona(nombre, edad, calle){
+    this.nombre = nombre;
+    this.edad = edad;
+    this.calle = calle;
+}
+
+const persona1 = new Persona("Homero", 39, "Ameghino 1556")];
+const persona2 = new Persona ("Marge", 36, "Ameghino 1556");
+
+y para ejecutar esta funcion constructura, debemos usar una palabra extra
+
+Entonces, el constructor crea una funcion, en donde va trabajando las caracteristicas que van a tener en comun los objetos que va a crear, y luego con la palabra reservada this, acompañada del parametro hace mencion a lo que va a crear.
+
+Y luego la ejecucion del constructor, se hace creando otra variable, pero incluyendole el constructor con los atributos que configuramos para que cree
+
+El constructor en javascript, es lo que se usa como models en python
+
+Metodos y operaciones:
+
+Un metodo es una funcion, pero que esta definida dentro del objeto y solamente la vamos a poder ejecutar en ese objeto
+
+Hay metodos especiales que se encargan de ejecutar una accion determinada
+
+ej)
+
+let cadena = "HOLA CODER";
+
+console.log(cadena.lenght);
+console.log(cadena.toLowerCase)
+console.log(cadena.toUpperCase)
+
+Estos son distintos metodos que se aplican a la variable que nosotros creamos, e interactuan haciendo una accion a esta variable
+
+Por ejemplo, el primer metodo devuelve el numero de caracteres que tiene nuestro string
+
+Hay metodos que llevan predeterminadamente parentesis, y otras no, esto se da porque hay metodos que son funciones y otras son propiedades
+
+Tambien hay metodos que nosotros podemos usar de manera personalizada, esto lo podemos mezclar con funciones anonimas, y ejecutariamos funciones que creamos con metodos personalizados
+
+ej)
+
+function Producto(nombre, precio, stock){
+    this.nombre = nombre
+//  this.precio = precio 
+//  this.stock = stock
+    this.sumarIva = function(precio){
+        return precio * 1.21
+    }
+    this.sumarStock = function (cantidad) {this.stock += cantidad}
+}
+
+const productoB = new Producto("Silla", 3000, 20)
+
+productoB.sumarIva()
+productoD.sumarStock(28)
+
+
+aca estamos creando nuestro propio metodo, tratandolo como una funcion anonima dentro de un constructor, y esto es algo util de hacer, es que creamos una funcionalidad propia
+
+esto se ejecuta como una funcion, aparte, ya que no tenemos que hacer mencion al constructor
+
+Operador in y for in: Estos operadores sirven para acceder a la propiedad de manera interna 
+
+Clases:
+
+Nosotros vimos como hacer una funcion constructora, pero existen otras formas de construir, y esto lo podemos realizar con el uso de clases, que es similar pero agregando cosas extras ya que permite definir otro tipo de datos
+
+Las clases se añadieron en las ultimas actualizaciones de javascript, y el sentido de esto es que es una forma de construir parecida a otros lenguajes, aunque podemos usar cualquiera de las dos
+
+ej) class Persona{
+    constructor(nombre, edad, calle){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.calle = calle;
+    }
+    hablar(){
+        console.log("Hola soy " + this.nombre)
+    }
+}
+
+const persona1 = new Persona("Homero", 39, "Ameghino 1556")
+
+Dentro de estas clases, se llama a la palabra reservada llamada constructor, que funciona como una funcion anonima, y si nosotros queremos añadir metodos, tenemos que hacerlos por fuera del constructor, ya que en el constructor solo ponemos propiedades, y fuera del constructor incluimos los metodos
+
+Usar clases, o funciones constructoras es muy similar, queda en cada uno ver que usamos para cada cosa-
