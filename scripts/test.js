@@ -53,12 +53,11 @@
 // }
 
 // Funciones ejemplos
-
 // function saludar(){
 //     console.log("Bienvenidos a todos")
 // }
 
-// saludar();
+// saludar()
 
 // function suma (num1, num2){
 //     let numero = num1 + num2;
@@ -69,8 +68,11 @@
 // suma(8, 24)
 
 // function suma(num1, num2){
-//     return num1 + num2
+//     return num1 + num2;
 // }
+
+// let resultado = suma(10,10)
+// console.log(resultado)
 
 // function mensaje(resultado){
 //     console.log(resultado)
@@ -96,3 +98,62 @@
 
 // let text = "hola amigos";
 // console.log(text.length)
+
+
+// let lista = [5, "Coder", 80, true, "House"] 
+
+// for(let i = 0; i < 5; i++){
+//     console.log(lista[i])
+// }
+
+// De esta manera, se recorre el array y se muestran todos sus valores en la consola
+
+// Higher order functions
+
+// function porCadaUno(arr, fn){
+//     for (const element of arr){
+//         fn(element)
+//     }
+// }
+
+// const numeros = [1,2,3,4,5,6]
+
+// porCadaUno(numeros, console.log)
+
+// Al ejecutar esta función, nos devuelve un recorrido de todos los numeros que indicamos
+
+// ejemplo con funcion flecha
+
+// function porCadaUno(arr, fn){
+//     for (const el of arr){
+//         fn(el)
+//     }
+// }
+
+// const numeros = [1,2,3,4,5,6]
+
+// let total = 0
+
+// function acumular(num){
+//     total =+ num
+// }
+
+// porCadaUno(numeros, (num) => {total =+ num})
+
+// otro ejemplo de hof
+
+
+// function asignarOperacion(op){
+//     if(op == "sumar"){
+//         return (a,b) => a + b
+//     }
+//     else if (op == "restar"){
+//         return (a,b) => a - b
+//     }
+// }
+
+// let suma = asignarOperacion("sumar")
+// let resta = asignarOperacion("restar")
+
+// console.log(suma(4,6))
+// console.log(resta(5,3))
