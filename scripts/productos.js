@@ -1,4 +1,4 @@
-let bienvenida = prompt("Bienvenido a nuestro catalogo")
+let bienvenida = alert("Bienvenido a nuestro catalogo")
 
 class Productos{
     constructor(nombre, precio, stock){
