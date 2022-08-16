@@ -22,3 +22,4 @@ const verStock = misProductos.map( (elements) =>{
 })
 
 console.log(verStock)
+
