@@ -1,0 +1,9 @@
+body{
+    background-color: black;
+}
+
+.title{
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}

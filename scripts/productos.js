@@ -1,5 +1,3 @@
-let bienvenida = alert("Bienvenido a nuestro catalogo")
-
 class Productos{
     constructor(nombre, precio, stock){
         this.nombre = nombre.toUpperCase()
@@ -22,4 +20,11 @@ const verStock = misProductos.map( (elements) =>{
 })
 
 console.log(verStock)
+
+const dataJson = JSON.stringify(misProductos)
+console.log(dataJson)
+
+localStorage.setItem("productos", dataJson)
+
+
 
