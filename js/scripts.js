@@ -26,5 +26,16 @@ console.log(dataJson)
 
 localStorage.setItem("productos", dataJson)
 
+let carritoBoton = document.getElementsByTagName()
+carritoBoton.addEventListener("click", mensaje)
 
+const mensaje = () =>{
+    Swal.fire({
+        icon: 'error',
+        title: 'Carrito vacio',
+        text: 'No tiene productos en su carrito',
+        footer: '<a href="">Why do I have this issue?</a>'
+      })
+    
+}
 
