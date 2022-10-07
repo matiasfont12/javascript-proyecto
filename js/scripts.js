@@ -26,7 +26,7 @@ console.log(dataJson)
 
 localStorage.setItem("productos", dataJson)
 
-let carritoBoton = document.getElementsByTagName()
+let carritoBoton = document.getElementById("carritoBoton")
 carritoBoton.addEventListener("click", mensaje)
 
 const mensaje = () =>{
